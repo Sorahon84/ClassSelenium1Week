@@ -3,7 +3,7 @@ package ClassSelenium1Week;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class HomeWork2WebDriverCommands {
+public class E2HomeWorkWebDriverCommands {
     public static void main(String[] args) {
 
         WebDriver driver = new ChromeDriver();

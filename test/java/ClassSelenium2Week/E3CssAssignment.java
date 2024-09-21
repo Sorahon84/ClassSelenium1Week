@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class CSS03Assignment {
+public class E3CssAssignment {
     public static void main(String[] args) {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -31,7 +31,7 @@ public class CSS03Assignment {
 
         WebElement email = driver.findElement(By.cssSelector("input[name='email']"));
         email.sendKeys("john12doe@example.com");
-//
+
         WebElement courseTopic = driver.findElement(By.cssSelector("input[name='CourseTopic']"));
         courseTopic.sendKeys("CSS Selectors");
 
