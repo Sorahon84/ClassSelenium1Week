@@ -13,20 +13,28 @@ public class E4WebElementCommandsAssignment {
         driver.get("https://www.syntaxprojects.com/selenium_commands_selector-homework.php");
 
         WebElement customAttributeElement = driver.findElement(By.xpath("//div[@id='textattr']"));
-        String customText = customAttributeElement.getText();
-        System.out.println("Custom Attribute Text: " + customText);
+        String text = customAttributeElement.getText();
+        System.out.println("the text in the attribute section is :" + text);
+        if(text.equals("inspect me to view my custom attribute")){
+            System.out.println("the text matches to the one mentioned in acceptance criteria");
+        }
+        else {
+            System.out.println("the text doesn't match to the one mentioned in acceptance criteria");
+        }
+
 
         WebElement musicalFestivalCheckbox = driver.findElement(By.xpath("//input[@value='music_festival']"));
-        boolean firstButton1 = musicalFestivalCheckbox.isSelected();
-        System.out.println("Musical festival checkbox button selection in " + firstButton1); // false
-       musicalFestivalCheckbox.click();
-        firstButton1 = musicalFestivalCheckbox.isSelected();
-        System.out.println("Musical festival checkbox button selection in " + firstButton1); // true
-
+        if (musicalFestivalCheckbox.isEnabled()) ;
+        musicalFestivalCheckbox.click();
 
         WebElement techTalkCheckbox  = driver.findElement(By.xpath("//input[@value='tech_talk']"));
         boolean button2 = techTalkCheckbox .isEnabled();
-        System.out.println("Tech Talk button2 is enable " + button2); // false
+        if (!button2) {
+            System.out.println("the tech talk radio button is disabled == test case pass");
+        } else {
+            System.out.println("the tech talk radio button is enabled ===  test case fail");
+        }
+
 
 
         WebElement showMoreButton = driver.findElement(By.xpath("//button[normalize-space()='Show More Options']"));
@@ -56,9 +64,13 @@ public class E4WebElementCommandsAssignment {
         } else {
             System.out.println("Checkbox 2 is enabled (unexpected).");
         }
+        //        get the value of attribute title
+        WebElement titleElement = driver.findElement(By.xpath("//div[@id='hidden_message']"));
+        System.out.println(titleElement.getAttribute("title"));
+        //        find the text box and clear it
         WebElement inputField = driver.findElement(By.xpath("//input[@id='inputField']"));
         inputField.clear();
-        inputField.sendKeys("here is the custom text entered.");
+        inputField.sendKeys("here is the custom text entered");
 
 
 

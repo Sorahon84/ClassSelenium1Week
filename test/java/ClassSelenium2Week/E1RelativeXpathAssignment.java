@@ -7,8 +7,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class E1RelativeXpathAssignment {
     public static void main(String[] args) throws InterruptedException {
-        WebDriver driver=new ChromeDriver();
-driver.get("https://www.syntaxprojects.com/Xpath-homework.php");
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://www.syntaxprojects.com/Xpath-homework.php");
         driver.manage().window().maximize();
         // 01 Your Hobbies
         WebElement hobbies = driver.findElement(By.xpath("//*[@id='yourHobbiesId']"));
@@ -39,15 +39,15 @@ driver.get("https://www.syntaxprojects.com/Xpath-homework.php");
         city.sendKeys("Hutto Texas");
 
         // 06 Personal email
-        WebElement personalEmail = driver.findElement(By.xpath("//input[@id='PersonalEmailID']"));
+        WebElement personalEmail = driver.findElement(By.xpath("//input[@id='private_email_id']"));
         personalEmail.sendKeys("example@example.com");
         // 07 Office email
-        WebElement officeEmail = driver.findElement(By.xpath("//input[@id='OfficeEmailID']"));
+        WebElement officeEmail = driver.findElement(By.xpath("//input[@id='office_email_id']"));
         officeEmail.sendKeys("soralee@example.com");
         // 08 Professional email
-        WebElement professionalEmail = driver.findElement(By.xpath("//input[@id='ProfessionalEmailID']"));
+        WebElement professionalEmail = driver.findElement(By.xpath("//input[@id='professional_email_id']"));
         professionalEmail.sendKeys("myson@gmail.com");
-
+        
 
         // 09 Client Name
         WebElement clientName = driver.findElement(By.xpath("//input[@id='clientName']"));
@@ -55,6 +55,7 @@ driver.get("https://www.syntaxprojects.com/Xpath-homework.php");
         // 10 Client Id
         WebElement clientId = driver.findElement(By.xpath("//input[@id='clientId']"));
         clientId.sendKeys("12345");
+
 
         // 11 Street Number
         WebElement streetNumber = driver.findElement(By.xpath("//input[@name='StreetNo']"));
@@ -65,30 +66,6 @@ driver.get("https://www.syntaxprojects.com/Xpath-homework.php");
 
         //Thread.sleep(2000);
         //driver.quit();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     }

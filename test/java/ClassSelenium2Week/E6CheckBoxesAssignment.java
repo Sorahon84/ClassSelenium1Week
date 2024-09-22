@@ -64,6 +64,7 @@ public class E6CheckBoxesAssignment {
         } else {
             System.out.println("Receive Notifications checkbox is enabled.");
         }
+        Thread.sleep(2000);
         WebElement enableCheckboxesButton = driver.findElement(By.xpath("//button[@id='enabledcheckbox']")); // Update with the actual ID
         enableCheckboxesButton.click();
 
