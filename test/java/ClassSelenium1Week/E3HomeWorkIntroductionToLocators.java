@@ -28,9 +28,6 @@ public class E3HomeWorkIntroductionToLocators {
         CurrentAddress.sendKeys("123 Main St, City");
         WebElement PermanentAddress = driver.findElement(By.name("PermanentAddress"));
         PermanentAddress.sendKeys("456 Elm St, City");
-
-        //WebElement link1 = driver.findElement(By.linkText("Click Here."));
-        //link1.click();
         WebElement submitPress = driver.findElement(By.name("btn-submit"));
         submitPress.click();
 

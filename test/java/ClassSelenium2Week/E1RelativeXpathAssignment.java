@@ -39,13 +39,13 @@ public class E1RelativeXpathAssignment {
         city.sendKeys("Hutto Texas");
 
         // 06 Personal email
-        WebElement personalEmail = driver.findElement(By.xpath("//input[@id='private_email_id']"));
+        WebElement personalEmail = driver.findElement(By.xpath("(//input[@id='private_email_id'])[1]"));
         personalEmail.sendKeys("example@example.com");
         // 07 Office email
-        WebElement officeEmail = driver.findElement(By.xpath("//input[@id='office_email_id']"));
+        WebElement officeEmail = driver.findElement(By.xpath("(//input[@id='office_email_id'])[1]"));
         officeEmail.sendKeys("soralee@example.com");
         // 08 Professional email
-        WebElement professionalEmail = driver.findElement(By.xpath("//input[@id='professional_email_id']"));
+        WebElement professionalEmail = driver.findElement(By.xpath("(//input[@id='professional_email_id'])[1]"));
         professionalEmail.sendKeys("myson@gmail.com");
 
 
